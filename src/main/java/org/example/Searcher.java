@@ -34,7 +34,7 @@ public class Searcher {
         for (String[] pair : replacements) {
             text = text.replace(pair[0], pair[1]);
         }
-        System.out.println(text);
+//        System.out.println(text);
         return text;
     }
 
