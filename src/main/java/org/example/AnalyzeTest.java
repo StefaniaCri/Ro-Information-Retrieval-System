@@ -27,16 +27,9 @@ public class AnalyzeTest {
         }
     }
 
-    /**
-     * Analizează textul utilizând un Analyzer și returnează termeni analizați ca șir de text.
-     * @param analyzer Analyzer-ul utilizat
-     * @param text Textul de analizat
-     * @return Termeni analizați separați prin spațiu
-     * @throws IOException Dacă apare o eroare în procesarea TokenStream-ului
-     */
     public static String analyzeText(Analyzer analyzer, String text) throws IOException {
         StringBuilder analyzedTokens = new StringBuilder();
-//
+
         TokenStream tokenStream = analyzer.tokenStream("fieldName", new StringReader(text));
 
         CharTermAttribute charTermAttr = tokenStream.addAttribute(CharTermAttribute.class);
